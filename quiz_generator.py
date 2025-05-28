@@ -127,5 +127,3 @@ class QuizTool:
                 break
             else:
                 print(colored("Invalid Input, only choose from the selection (1/2/3/4) \n", "red"))
-
-QuizTool()

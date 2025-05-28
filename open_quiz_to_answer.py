@@ -5,9 +5,6 @@ from termcolor import colored
 
 class QuizAnswerTool:
     def __init__(self):
-        self.title = pyfiglet.figlet_format("Welcome to \n Answer Quiz")
-        print(colored(self.title, "blue"))
-
         self.text_files = []
         self.each_line = []
         self.total_score = 0
@@ -64,7 +61,7 @@ class QuizAnswerTool:
             current_answer = self.each_line[index+5][16:].strip().lower()
             if answer.lower().strip() == current_answer:
                 print(colored("correct\n", "green"))
-                total_score += 1
+                self.total_score += 1
 
             else:
                 print(colored("incorrect\n", "red"))
