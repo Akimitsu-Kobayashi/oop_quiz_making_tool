@@ -3,7 +3,7 @@ import os
 import pyfiglet
 from termcolor import colored
 
-class Quiz_Tool:
+class QuizTool:
     
     def __init__(self):
         self.base_name = input("File name of quiz: ").strip()
@@ -127,3 +127,5 @@ class Quiz_Tool:
                 break
             else:
                 print(colored("Invalid Input, only choose from the selection (1/2/3/4) \n", "red"))
+
+QuizTool()

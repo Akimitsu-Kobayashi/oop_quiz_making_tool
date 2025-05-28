@@ -17,3 +17,11 @@ class QuizAnswerTool:
         for files_name in os.listdir("."):
             if files_name.endswith(".txt"):
                 self.text_files.append(files_name)
+        # print the found text files
+        number_counter = 0
+        for files in self.text_files:
+            print(f"{str(number_counter + 1)}) {files}")
+            number_counter += 1
+
+QuizAnswerTool().find_text_files()
+
