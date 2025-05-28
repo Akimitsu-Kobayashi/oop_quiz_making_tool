@@ -31,7 +31,7 @@ class Quiz_Tool:
 
         #write the collected data to a .txt file
         with open(self.file_name, "a") as quiz_file:
-            quiz_file.write(f"{question_number}.Question: {question}\n")
+            quiz_file.write(f"{self.question_number}.Question: {question}\n")
             quiz_file.write("A. " + option_a + "\n")
             quiz_file.write("B. " + option_b + "\n")
             quiz_file.write("C. " + option_c + "\n")
@@ -39,8 +39,8 @@ class Quiz_Tool:
             quiz_file.write("Correct Answer: " + correct_answer + "\n")
         
     
-        question_number += 1
-        questions_made += 1
+        self.question_number += 1
+        self.questions_made += 1
     
     def view_questions(self):
         #read the file 
@@ -105,25 +105,25 @@ class Quiz_Tool:
         with open(self.file_name, "w") as quiz_file:
             quiz_file.writelines(lines)
         
-        def menu(self):
-            while True:
-                print(colored("\nQUIZ BUILDER MENU", "yellow"))
-                print("1. Add a new question")
-                print("2. View saved questions")
-                print("3. Edit question")
-                print("4. Exit")
+    def menu(self):
+        while True:
+            print(colored("\nQUIZ BUILDER MENU", "yellow"))
+            print("1. Add a new question")
+            print("2. View saved questions")
+            print("3. Edit question")
+            print("4. Exit")
 
-                choice = input(colored("Select option (1/2/3/4): ", "blue")).strip()
-                print("")
+            choice = input(colored("Select option (1/2/3/4): ", "blue")).strip()
+            print("")
 
-                if choice == '1':
-                    self.add_question()
-                elif choice == '2':
-                    self.view_questions()
-                elif choice == '3':
-                    self.edit_question()
-                elif choice == '4':
-                    print("Goodbye")
-                    break
-                else:
-                    print(colored("Invalid Input, only choose from the selection (1/2/3/4) \n", "red"))
+            if choice == '1':
+                self.add_question()
+            elif choice == '2':
+                self.view_questions()
+            elif choice == '3':
+                self.edit_question()
+            elif choice == '4':
+                print("Goodbye")
+                break
+            else:
+                print(colored("Invalid Input, only choose from the selection (1/2/3/4) \n", "red"))
